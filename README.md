@@ -102,7 +102,8 @@ klausgrosser=# INSERT INTO partners.charities VALUES ('Red Cross', 'Berlin'), ('
 
 INSERT 0 4
 
-#Exercise 2
+##Exercise 2
+
 Exercise 2 Solution:
 testdb=# CREATE TABLE countries (country_id int, country_name varchar(80), region_id int);
 
