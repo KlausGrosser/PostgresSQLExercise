@@ -1,4 +1,4 @@
-# PostgresSQLExercise
+# PostgresSQLExercise 1
 > Create a database - “Digital Career Institute”  
 > rename it to dci  
 > _Hint:_ Use ALTER DATABASE command with RENAME TO.  
@@ -101,4 +101,92 @@ INSERT 0 4
 klausgrosser=# INSERT INTO partners.charities VALUES ('Red Cross', 'Berlin'), ('GreenPeace', 'Mexico'),('PETA','USA'),('A.A.', 'UK');
 
 INSERT 0 4
+
+#Exercise 2
+Exercise 2 Solution:
+testdb=# CREATE TABLE countries (country_id int, country_name varchar(80), region_id int);
+
+CREATE TABLE
+
+CREATE TABLE IF NOT EXISTS countries ( 
+country_id int),
+country_name varchar(80),
+region_id int
+);
+
+NOTICE:  relation "countries" already exists, skipping
+CREATE TABLE
+
+
+CREATE TABLE dup_countries AS SELECT * FROM countries WHERE 1=2;
+
+SELECT 0
+
+CREATE TABLE dup_countries AS SELECT * FROM countries;
+
+SELECT 0
+
+CREATE TABLE IF NOT EXISTS countries ( 
+country_id int NOT NULL,
+country_name varchar(80) NOT NULL,
+region_id int NOT NULL
+);
+
+CREATE TABLE
+
+testdb=# CREATE TABLE IF NOT EXISTS jobs ( 
+testdb(# JOB_ID varchar(10) NOT NULL , 
+testdb(# JOB_TITLE varchar(35) NOT NULL, 
+testdb(# MIN_SALARY decimal(6,0), 
+testdb(# MAX_SALARY decimal(6,0) 
+testdb(# CHECK(MAX_SALARY<=25000)
+testdb(# );
+
+CREATE TABLE
+
+CREATE TABLE IF NOT EXISTS countries ( 
+COUNTRY_ID varchar(2),
+COUNTRY_NAME varchar(40)
+CHECK(COUNTRY_NAME IN('Italy','India','China')) ,
+REGION_ID decimal(10,0)
+);
+
+CREATE TABLE
+
+testdb=# CREATE TABLE IF NOT EXISTS countries ( 
+testdb(# COUNTRY_ID varchar(2) NOT NULL,
+testdb(# COUNTRY_NAME varchar(40) NOT NULL,
+testdb(# REGION_ID decimal(10,0) NOT NULL,
+testdb(# UNIQUE(COUNTRY_ID)
+testdb(# );
+
+CREATE TABLE
+
+testdb=# CREATE TABLE IF NOT EXISTS jobs ( 
+testdb(# JOB_ID varchar(10) NOT NULL UNIQUE, 
+testdb(# JOB_TITLE varchar(35) NOT NULL DEFAULT ' ', 
+testdb(# MIN_SALARY decimal(6,0) DEFAULT 8000, 
+testdb(# MAX_SALARY decimal(6,0) DEFAULT NULL
+testdb(# );
+
+CREATE TABLE
+
+testdb=# CREATE TABLE IF NOT EXISTS countries ( 
+testdb(# COUNTRY_ID varchar(2) NOT NULL UNIQUE PRIMARY KEY,
+testdb(# COUNTRY_NAME varchar(40) NOT NULL,
+testdb(# REGION_ID decimal(10,0) NOT NULL
+testdb(# );
+
+CREATE TABLE
+
+testdb=# CREATE TABLE IF NOT EXISTS countries (
+testdb(# COUNTRY_ID varchar(2) NOT NULL UNIQUE DEFAULT '',
+testdb(# COUNTRY_NAME varchar(40) DEFAULT NULL,
+testdb(# REGION_ID decimal(10,0) NOT NULL,
+testdb(# PRIMARY KEY (COUNTRY_ID,REGION_ID));
+NOTICE:  relation "countries" already exists, skipping
+
+CREATE TABLE
+
+
 
